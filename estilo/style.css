@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(/fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Aquire';
+    src: url(../fontes/AquireBold-8Ma60.otf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Munich';
+    src: url(/fontes/MUNICH\ SANS.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fontes/Montserrat-SemiBold.ttf) format(truetype);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Padrao';
+    src: url(/fontes/Montserrat-Regular.ttf) format(truetype); 
+    font-weight: normal;
+}
+
+:root {
+    --cor00: #ece2e2;
+    --cor01: #A9A9C5;
+    --cor02: #D0D2E1;
+    --cor03: #EBECF1;
+    --cor04: #908DB8;
+    --cor05: #686685;
+
+    --fonte-padrao: 'Padrao';
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android';
+    --fonte-aquire: 'Aquire';
+    --fonte-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-padrao) ;
+    background-color: var(--cor05);
+}
+
+a.externo {
+    text-decoration: none;
+    background-color: var(--cor01);
+}
+
+a.externo:hover {
+    text-decoration: underline;
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, #D0D2E1, #908DB8 );
+    min-height: 150px;
+    text-align: center;
+    padding: 40px;
+}
+
+header > p {
+    text-align: center;
+    text-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.349);
+}
+
+p {
+    margin: 15px 0px;
+    padding: 0px 15px;
+    font-family: var(--fonte-montserrat);
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
+strong {
+    color: var(--cor05);
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--cor04);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.400);
+
+}
+
+nav > a {
+    color: var(--);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: #4a4680;
+    color: var(--cor02);
+    padding: 5px;
+}
+
+header > h1 {
+    font-family: var(--fonte-aquire) ;
+    font-size: 2.3em;
+    text-align: center;
+    
+}
+
+main {
+    background-color: white;
+    padding: 15px;
+    min-width: 300px ;
+    max-width: 1000px ;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    border-radius: 0px 0px 10px 10px ;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.644);
+}
+
+main  h1 {
+    color: var(--cor04);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+    text-indent: 20px;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    margin: 10px;
+    color: #4a4680;
+    background-image: linear-gradient( to right,#908DB8, transparent );
+    text-indent: 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: #4a4680;
+    height: 580px;
+    position: relative;
+}
+
+div.video > iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    padding-top: 25px;
+}
+
+aside {
+    background-color: var(--cor01);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+aside > h3 {
+    background-color: var(--cor02);
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+}
+
+aside > ul {
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+}
+
+footer { 
+    background-color: var(--cor04);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor02);
+}
